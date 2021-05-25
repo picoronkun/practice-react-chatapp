@@ -1,4 +1,4 @@
-import React from 'react';
+import React,{useState} from 'react';
 import defaultDataset from './dataset';
 import '../src/assets/sytles/index.css';
 import '../src/assets/sytles/style.css';
@@ -6,6 +6,7 @@ import {AnswersList, Chats} from './Components/index';
 import FormDialog from './Components/Forms/FormDialog'; 
 
 export default class App extends React.Component {
+  
   
   constructor(props) {
       super(props) ;
@@ -93,6 +94,7 @@ export default class App extends React.Component {
   render() {
     return (
       <section className="c-section">
+        
         <div className="c-box">
           <Chats chats={this.state.chats} />
           <AnswersList answers={this.state.answers} select={this.selectAnswer}/>
